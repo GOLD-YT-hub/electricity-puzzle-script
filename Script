@@ -78,6 +78,10 @@ local SkinCreator_V1 = {
 	ViewportFrame = Instance.new("ViewportFrame"),
 }
 
+local stuffe = game:GetService("Players").LocalPlayer.PlayerGui["SkinCreator V1"].Stuff
+local drag = Instance.new("UIDragDetector")
+drag.Parent = stuffe
+
 SkinCreator_V1.SkinCreator_V1.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 SkinCreator_V1.Stuff.Parent = SkinCreator_V1.SkinCreator_V1
 SkinCreator_V1.SkinCreate.Parent = SkinCreator_V1.Stuff
@@ -417,4 +421,49 @@ end)
 
 SkinCreator_V1.Yin___Yang.MouseButton1Up:Connect(function()
 	EquippedSkin.Value = "Darkness"
+end)
+
+SkinCreator_V1.Dupe_XP.MouseButton1Up:Connect(function()
+	local XP = game:GetService("Players").LocalPlayer.leaderstats.XP.Value
+
+	local Event = game:GetService("ReplicatedStorage").GiveXP
+	Event:FireServer(
+    	XP
+	)
+end)
+
+SkinCreator_V1.Dupe_Volts.MouseButton1Up:Connect(function()
+	local Volts = game:GetService("Players").LocalPlayer.Volts.Value
+
+	local Event2 = game:GetService("ReplicatedStorage").GiveVolts
+	Event2:FireServer(
+    	Volts,
+    	"click"
+	)
+end)
+
+SkinCreator_V1.Free_Upgrade.MouseButton1Up:Connect(function()
+	local Event = game:GetService("ReplicatedStorage").BuyUpgrade
+	Event:FireServer(
+    	"Current",
+    	0
+	)
+
+	local Event2 = game:GetService("ReplicatedStorage").BuyUpgrade
+	Event2:FireServer(
+    	"SolarPanel",
+    	0
+	)
+
+	local Event3 = game:GetService("ReplicatedStorage").BuyUpgrade
+	Event3:FireServer(
+    	"Windmill",
+    	0
+	)
+
+	local Event4 = game:GetService("ReplicatedStorage").BuyUpgrade
+	Event4:FireServer(
+    	"Biomass",
+    	0
+	)
 end)

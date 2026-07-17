@@ -78,9 +78,9 @@ local SkinCreator_V1 = {
 	ViewportFrame = Instance.new("ViewportFrame"),
 }
 
-local stuffe = game:GetService("Players").LocalPlayer.PlayerGui["SkinCreator V1"].Stuff
+local stuff = SkinCreator_V1.Stuff
 local drag = Instance.new("UIDragDetector")
-drag.Parent = stuffe
+drag.Parent = stuff
 
 SkinCreator_V1.SkinCreator_V1.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 SkinCreator_V1.Stuff.Parent = SkinCreator_V1.SkinCreator_V1

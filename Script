@@ -37,9 +37,9 @@ Color2_2.Name = "2"
 Color2_2.Value = Color3.fromRGB(252, 179, 79)
 
 local Color2_3 = Instance.new("Color3Value")
-Color2_2.Parent = ElectricityColors2
-Color2_2.Name = "3"
-Color2_2.Value = Color3.fromRGB(245, 252, 78)
+Color2_3.Parent = ElectricityColors2
+Color2_3.Name = "3"
+Color2_3.Value = Color3.fromRGB(245, 252, 78)
 
 local Color2_4 = Instance.new("Color3Value")
 Color2_4.Parent = ElectricityColors2

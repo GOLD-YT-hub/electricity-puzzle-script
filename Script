@@ -17,73 +17,73 @@ OrderNum.Parent = RANBOW2
 OrderNum.Name = "OrderNumber"
 OrderNum.Value = "12"
 
-local ElectricityColors = Instance.new("Folder")
+local ElectricityColors2 = Instance.new("Folder")
 ElectricityColors.Parent = RANBOW2
 ElectricityColors.Name = "ElectricityColors"
 
-local TrailColors = Instance.new("Folder")
+local TrailColors2 = Instance.new("Folder")
 TrailColors.Parent = RANBOW2
 TrailColors.Name = "TrailColors"
 
 --Inside Electricity Colors
 local Color2_1 = Instance.new("Color3Value")
-Color2_1.Parent = ElectricityColors
+Color2_1.Parent = ElectricityColors2
 Color2_1.Name = "1"
 Color2_1.Value = Color3.fromRGB(252, 79, 79)
 
 local Color2_2 = Instance.new("Color3Value")
-Color2_2.Parent = ElectricityColors
+Color2_2.Parent = ElectricityColors2
 Color2_2.Name = "2"
 Color2_2.Value = Color3.fromRGB(252, 179, 79)
 
 local Color2_3 = Instance.new("Color3Value")
-Color2_2.Parent = ElectricityColors
+Color2_2.Parent = ElectricityColors2
 Color2_2.Name = "3"
 Color2_2.Value = Color3.fromRGB(245, 252, 78)
 
 local Color2_4 = Instance.new("Color3Value")
-Color2_4.Parent = ElectricityColors
+Color2_4.Parent = ElectricityColors2
 Color2_4.Name = "4"
 Color2_4.Value = Color3.fromRGB(121, 247, 120)
 
 local Color2_5 = Instance.new("Color3Value")
-Color2_5.Parent = ElectricityColors
+Color2_5.Parent = ElectricityColors2
 Color2_5.Name = "5"
 Color2_5.Value = Color3.fromRGB(121, 120, 247)
 
 local Color2_6 = Instance.new("Color3Value")
-Color2_6.Parent = ElectricityColors
+Color2_6.Parent = ElectricityColors2
 Color2_6.Name = "6"
 Color2_6.Value = Color3.fromRGB(200, 120, 247)
 
 --Inside Trail Colors
 local TColor2_1 = Instance.new("Color3Value")
-TColor2_1.Parent = TrailColors
+TColor2_1.Parent = TrailColors2
 TColor2_1.Name = "1"
 TColor2_1.Value = Color3.fromRGB(252, 79, 79)
 
 local TColor2_2 = Instance.new("Color3Value")
-TColor2_2.Parent = TrailColors
+TColor2_2.Parent = TrailColors2
 TColor2_2.Name = "2"
 TColor2_2.Value = Color3.fromRGB(252, 179, 79)
 
 local TColor2_3 = Instance.new("Color3Value")
-TColor2_3.Parent = TrailColors
+TColor2_3.Parent = TrailColors2
 TColor2_3.Name = "3"
 TColor2_3.Value = Color3.fromRGB(245, 252, 78)
 
 local TColor2_4 = Instance.new("Color3Value")
-TColor2_4.Parent = TrailColors
+TColor2_4.Parent = TrailColors2
 TColor2_4.Name = "4"
 TColor2_4.Value = Color3.fromRGB(121, 247, 120)
 
 local TColor2_5 = Instance.new("Color3Value")
-TColor2_5.Parent = TrailColors
+TColor2_5.Parent = TrailColors2
 TColor2_5.Name = "5"
 TColor2_5.Value = Color3.fromRGB(121, 120, 247)
 
 local TColor2_6 = Instance.new("Color3Value")
-TColor2_6.Parent = TrailColors
+TColor2_6.Parent = TrailColors2
 TColor2_6.Name = "6"
 TColor2_6.Value = Color3.fromRGB(200, 120, 247)
 

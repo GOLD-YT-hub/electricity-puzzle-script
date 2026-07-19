@@ -18,12 +18,12 @@ OrderNum.Name = "OrderNumber"
 OrderNum.Value = "12"
 
 local ElectricityColors2 = Instance.new("Folder")
-ElectricityColors.Parent = RANBOW2
-ElectricityColors.Name = "ElectricityColors"
+ElectricityColors2.Parent = RANBOW2
+ElectricityColors2.Name = "ElectricityColors"
 
 local TrailColors2 = Instance.new("Folder")
-TrailColors.Parent = RANBOW2
-TrailColors.Name = "TrailColors"
+TrailColors2.Parent = RANBOW2
+TrailColors2.Name = "TrailColors"
 
 --Inside Electricity Colors
 local Color2_1 = Instance.new("Color3Value")

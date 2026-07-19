@@ -82,7 +82,7 @@ local stuff = SkinCreator_V1.Stuff
 local drag = Instance.new("UIDragDetector")
 drag.Parent = stuff
 
-SkinCreator_V1.SkinCreator_V1.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+SkinCreator_V1.SkinCreator_V1.Parent = game:GetService("CoreGui")
 SkinCreator_V1.Stuff.Parent = SkinCreator_V1.SkinCreator_V1
 SkinCreator_V1.SkinCreate.Parent = SkinCreator_V1.Stuff
 SkinCreator_V1.Yin___Yang.Parent = SkinCreator_V1.SkinCreate

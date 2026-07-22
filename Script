@@ -1050,8 +1050,12 @@ SkinCreator_V1.Free_Upgrade.MouseButton1Up:Connect(function()
 	)
 end)
 
-SkinCreator_V1.DevTools.MouseButton1Up:Connect(function()
+SkinCreator_V1.Inf_Yield.MouseButton1Up:Connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+SkinCreator_V1.TextButton.MouseButton1Up:Connect(function()
+	SkinCreator_V1.SkinCreator_V1:Destroy()
 end)
 
 

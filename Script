@@ -962,7 +962,7 @@ SkinCreator_V1.SkinCreator.MouseButton1Up:Connect(function()
 	SkinCreator_V1.Dev.Visible = false
 end)
 
-SkinCreator_V1.UpdateLog.MouseButton1Up:Connect(function()
+SkinCreator_V1.DevTools.MouseButton1Up:Connect(function()
 	SkinCreator_V1.Dev.Visible = true
 	SkinCreator_V1.Dupes.Visible = false
 	SkinCreator_V1.Credit.Visible = false
@@ -970,7 +970,7 @@ SkinCreator_V1.UpdateLog.MouseButton1Up:Connect(function()
 	SkinCreator_V1.SkinCreate.Visible = false
 end)
 
-SkinCreator_V1.SkinCreator.MouseButton1Up:Connect(function()
+SkinCreator_V1.Updates.MouseButton1Up:Connect(function()
 	SkinCreator_V1.UpdateLog.Visible = true
 	SkinCreator_V1.Dupes.Visible = false
 	SkinCreator_V1.Credit.Visible = false

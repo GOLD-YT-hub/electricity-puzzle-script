@@ -11,7 +11,7 @@ RANBOW2.Parent = SkinsFolder
 RANBOW2.Name = "Rainbow2"
 RANBOW2:SetAttribute("SkinType", "Animated")
 RANBOW2:SetAttribute("UnlockType", "Level")
---Inside The Darkness Folder
+--Inside The Ranbow2 Folder
 local OrderNum = Instance.new("IntValue")
 OrderNum.Parent = RANBOW2
 OrderNum.Name = "OrderNumber"
@@ -87,52 +87,7 @@ TColor2_6.Parent = TrailColors2
 TColor2_6.Name = "6"
 TColor2_6.Value = Color3.fromRGB(200, 120, 247)
 
---Darkness Color Setup
-local Darkness = Instance.new("Folder")
-Darkness.Parent = SkinsFolder
-Darkness.Name = "Darkness"
-Darkness:SetAttribute("SkinType", "Animated")
-Darkness:SetAttribute("UnlockType", "Level")
---Inside The Darkness Folder
-local OrderNum = Instance.new("IntValue")
-OrderNum.Parent = Darkness
-OrderNum.Name = "OrderNumber"
-OrderNum.Value = "11"
-
-local ElectricityColors = Instance.new("Folder")
-ElectricityColors.Parent = Darkness
-ElectricityColors.Name = "ElectricityColors"
-
-local TrailColors = Instance.new("Folder")
-TrailColors.Parent = Darkness
-TrailColors.Name = "TrailColors"
-
---Inside Electricity Colors
-local Color1_1 = Instance.new("Color3Value")
-Color1_1.Parent = ElectricityColors
-Color1_1.Name = "1"
-Color1_1.Value = Color3.fromRGB(0, 0, 0)
-
-local Color1_2 = Instance.new("Color3Value")
-Color1_2.Parent = ElectricityColors
-Color1_2.Name = "2"
-Color1_2.Value = Color3.fromRGB(255, 255, 255)
-
---Inside Trail Colors
-local TColor1_1 = Instance.new("Color3Value")
-TColor1_1.Parent = TrailColors
-TColor1_1.Name = "1"
-TColor1_1.Value = Color3.fromRGB(0, 0, 0)
-
-local TColor1_2 = Instance.new("Color3Value")
-TColor1_2.Parent = TrailColors
-TColor1_2.Name = "2"
-TColor1_2.Value = Color3.fromRGB(255, 255, 255)
-
-
-
-
-
+-----------
 
 -- Guis
 local SkinCreator_V1 = {
@@ -157,6 +112,7 @@ local SkinCreator_V1 = {
 	Credit = Instance.new("Frame"),
 	Creditss = Instance.new("TextLabel"),
 	Gold_YT = Instance.new("TextLabel"),
+	Danny = Instance.new("TextLabel"),
 	TopLine = Instance.new("Frame"),
 	Electricity = Instance.new("TextLabel"),
 	UIStroke = Instance.new("UIStroke"),
@@ -175,6 +131,8 @@ local SkinCreator_V1 = {
 	Update2_5INFO = Instance.new("TextLabel"),
 	Update3 = Instance.new("TextLabel"),
 	Update3INFO = Instance.new("TextLabel"),
+	Update4 = Instance.new("TextLabel"),
+	Update4INFO = Instance.new("TextLabel"),
 	Bar = Instance.new("Frame"),
 	UIStroke_2 = Instance.new("UIStroke"),
 	ScrollingFrame_2 = Instance.new("ScrollingFrame"),
@@ -188,17 +146,25 @@ local SkinCreator_V1 = {
 	UICorner_11 = Instance.new("UICorner"),
 	DevTools = Instance.new("TextButton"),
 	UICorner_12 = Instance.new("UICorner"),
+	Autofarm = Instance.new("TextButton"),
+	UICorner_13 = Instance.new("UICorner"),
 	Dev = Instance.new("Frame"),
 	Inf_Yield = Instance.new("TextButton"),
-	UICorner_13 = Instance.new("UICorner"),
+	UICorner_14 = Instance.new("UICorner"),
+	Autofarms = Instance.new("Frame"),
+	AutoLVL1 = Instance.new("TextButton"),
+	UICorner_15 = Instance.new("UICorner"),
+	Loop_1 = Instance.new("TextBox"),
 	OpenGui = Instance.new("Frame"),
 	Electro = Instance.new("ImageButton"),
-	UICorner_14 = Instance.new("UICorner"),
+	UICorner_16 = Instance.new("UICorner"),
 }
 
 local UIDRAG = Instance.new("UIDragDetector")
-UIDRAG.Parent = SkinCreator_V1.Stuff
-UIDRAG.Name = "UIDRAG"
+UIDRAG.Name = "Uidrag"
+UIDRAG.Parent = SkinCreator_V1.SkinCreator_V1
+
+SkinCreator_V1.Electro.Draggable = true
 
 SkinCreator_V1.SkinCreator_V1.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 SkinCreator_V1.Stuff.Parent = SkinCreator_V1.SkinCreator_V1
@@ -221,6 +187,7 @@ SkinCreator_V1.UICorner_7.Parent = SkinCreator_V1.Reset_Volts
 SkinCreator_V1.Credit.Parent = SkinCreator_V1.Stuff
 SkinCreator_V1.Creditss.Parent = SkinCreator_V1.Credit
 SkinCreator_V1.Gold_YT.Parent = SkinCreator_V1.Credit
+SkinCreator_V1.Danny.Parent = SkinCreator_V1.Credit
 SkinCreator_V1.TopLine.Parent = SkinCreator_V1.Stuff
 SkinCreator_V1.Electricity.Parent = SkinCreator_V1.TopLine
 SkinCreator_V1.UIStroke.Parent = SkinCreator_V1.TopLine
@@ -239,6 +206,8 @@ SkinCreator_V1.Update2_5.Parent = SkinCreator_V1.ScrollingFrame
 SkinCreator_V1.Update2_5INFO.Parent = SkinCreator_V1.ScrollingFrame
 SkinCreator_V1.Update3.Parent = SkinCreator_V1.ScrollingFrame
 SkinCreator_V1.Update3INFO.Parent = SkinCreator_V1.ScrollingFrame
+SkinCreator_V1.Update4.Parent = SkinCreator_V1.ScrollingFrame
+SkinCreator_V1.Update4INFO.Parent = SkinCreator_V1.ScrollingFrame
 SkinCreator_V1.Bar.Parent = SkinCreator_V1.Stuff
 SkinCreator_V1.UIStroke_2.Parent = SkinCreator_V1.Bar
 SkinCreator_V1.ScrollingFrame_2.Parent = SkinCreator_V1.Bar
@@ -252,12 +221,18 @@ SkinCreator_V1.Updates.Parent = SkinCreator_V1.ScrollingFrame_2
 SkinCreator_V1.UICorner_11.Parent = SkinCreator_V1.Updates
 SkinCreator_V1.DevTools.Parent = SkinCreator_V1.ScrollingFrame_2
 SkinCreator_V1.UICorner_12.Parent = SkinCreator_V1.DevTools
+SkinCreator_V1.Autofarm.Parent = SkinCreator_V1.ScrollingFrame_2
+SkinCreator_V1.UICorner_13.Parent = SkinCreator_V1.Autofarm
 SkinCreator_V1.Dev.Parent = SkinCreator_V1.Stuff
 SkinCreator_V1.Inf_Yield.Parent = SkinCreator_V1.Dev
-SkinCreator_V1.UICorner_13.Parent = SkinCreator_V1.Inf_Yield
+SkinCreator_V1.UICorner_14.Parent = SkinCreator_V1.Inf_Yield
+SkinCreator_V1.Autofarms.Parent = SkinCreator_V1.Stuff
+SkinCreator_V1.AutoLVL1.Parent = SkinCreator_V1.Autofarms
+SkinCreator_V1.UICorner_15.Parent = SkinCreator_V1.AutoLVL1
+SkinCreator_V1.Loop_1.Parent = SkinCreator_V1.Autofarms
 SkinCreator_V1.OpenGui.Parent = SkinCreator_V1.SkinCreator_V1
 SkinCreator_V1.Electro.Parent = SkinCreator_V1.OpenGui
-SkinCreator_V1.UICorner_14.Parent = SkinCreator_V1.Electro
+SkinCreator_V1.UICorner_16.Parent = SkinCreator_V1.Electro
 
 SkinCreator_V1.SkinCreator_V1.Name = "SkinCreator V1"
 SkinCreator_V1.SkinCreator_V1.ResetOnSpawn = true
@@ -518,6 +493,27 @@ SkinCreator_V1.Gold_YT.Visible = true
 SkinCreator_V1.Gold_YT.AnchorPoint = Vector2.new(0, 0)
 SkinCreator_V1.Gold_YT.ClipsDescendants = false
 
+SkinCreator_V1.Danny.Name = "Danny"
+SkinCreator_V1.Danny.ZIndex = 1
+SkinCreator_V1.Danny.Position = UDim2.new(0, 0, 0.451851845, 0)
+SkinCreator_V1.Danny.Size = UDim2.new(0, 143, 0, 25)
+SkinCreator_V1.Danny.BackgroundColor3 = Color3.fromRGB(255,255,255)
+SkinCreator_V1.Danny.BackgroundTransparency = 1
+SkinCreator_V1.Danny.Text = "DannyBonks - Creator Of The Game"
+SkinCreator_V1.Danny.TextScaled = true
+SkinCreator_V1.Danny.TextSize = 14
+SkinCreator_V1.Danny.Font = Enum.Font.FredokaOne
+SkinCreator_V1.Danny.TextColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.Danny.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.Danny.TextStrokeTransparency = 1
+SkinCreator_V1.Danny.TextWrapped = true
+SkinCreator_V1.Danny.TextXAlignment = Enum.TextXAlignment.Center
+SkinCreator_V1.Danny.TextYAlignment = Enum.TextYAlignment.Center
+SkinCreator_V1.Danny.TextTransparency = 0
+SkinCreator_V1.Danny.Visible = true
+SkinCreator_V1.Danny.AnchorPoint = Vector2.new(0, 0)
+SkinCreator_V1.Danny.ClipsDescendants = false
+
 SkinCreator_V1.TopLine.Name = "TopLine"
 SkinCreator_V1.TopLine.ZIndex = 1
 SkinCreator_V1.TopLine.Position = UDim2.new(0, -65, 0, 0)
@@ -652,7 +648,7 @@ SkinCreator_V1.UpdateLog.Position = UDim2.new(0, 0, 0, 0)
 SkinCreator_V1.UpdateLog.Size = UDim2.new(0, 414, 0, 270)
 SkinCreator_V1.UpdateLog.BackgroundColor3 = Color3.fromRGB(255,255,255)
 SkinCreator_V1.UpdateLog.BackgroundTransparency = 1
-SkinCreator_V1.UpdateLog.Visible = true
+SkinCreator_V1.UpdateLog.Visible = false
 SkinCreator_V1.UpdateLog.AnchorPoint = Vector2.new(0, 0)
 SkinCreator_V1.UpdateLog.ClipsDescendants = false
 SkinCreator_V1.UpdateLog.BorderSizePixel = 0
@@ -839,6 +835,48 @@ SkinCreator_V1.Update3INFO.Visible = true
 SkinCreator_V1.Update3INFO.AnchorPoint = Vector2.new(0, 0)
 SkinCreator_V1.Update3INFO.ClipsDescendants = false
 
+SkinCreator_V1.Update4.Name = "Update4"
+SkinCreator_V1.Update4.ZIndex = 1
+SkinCreator_V1.Update4.Position = UDim2.new(0, 0, 0.637866557, 0)
+SkinCreator_V1.Update4.Size = UDim2.new(0, 215, 0, 50)
+SkinCreator_V1.Update4.BackgroundColor3 = Color3.fromRGB(255,255,255)
+SkinCreator_V1.Update4.BackgroundTransparency = 1
+SkinCreator_V1.Update4.Text = "Update 4:"
+SkinCreator_V1.Update4.TextScaled = true
+SkinCreator_V1.Update4.TextSize = 14
+SkinCreator_V1.Update4.Font = Enum.Font.FredokaOne
+SkinCreator_V1.Update4.TextColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.Update4.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.Update4.TextStrokeTransparency = 1
+SkinCreator_V1.Update4.TextWrapped = true
+SkinCreator_V1.Update4.TextXAlignment = Enum.TextXAlignment.Center
+SkinCreator_V1.Update4.TextYAlignment = Enum.TextYAlignment.Center
+SkinCreator_V1.Update4.TextTransparency = 0
+SkinCreator_V1.Update4.Visible = true
+SkinCreator_V1.Update4.AnchorPoint = Vector2.new(0, 0)
+SkinCreator_V1.Update4.ClipsDescendants = false
+
+SkinCreator_V1.Update4INFO.Name = "Update4INFO"
+SkinCreator_V1.Update4INFO.ZIndex = 1
+SkinCreator_V1.Update4INFO.Position = UDim2.new(0, 0, 0.727496147, 0)
+SkinCreator_V1.Update4INFO.Size = UDim2.new(0, 215, 0, 34)
+SkinCreator_V1.Update4INFO.BackgroundColor3 = Color3.fromRGB(255,255,255)
+SkinCreator_V1.Update4INFO.BackgroundTransparency = 1
+SkinCreator_V1.Update4INFO.Text = "Update 4 Added AutoFarm Tab, And Unlock Yin&Yang"
+SkinCreator_V1.Update4INFO.TextScaled = true
+SkinCreator_V1.Update4INFO.TextSize = 14
+SkinCreator_V1.Update4INFO.Font = Enum.Font.FredokaOne
+SkinCreator_V1.Update4INFO.TextColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.Update4INFO.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.Update4INFO.TextStrokeTransparency = 1
+SkinCreator_V1.Update4INFO.TextWrapped = true
+SkinCreator_V1.Update4INFO.TextXAlignment = Enum.TextXAlignment.Center
+SkinCreator_V1.Update4INFO.TextYAlignment = Enum.TextYAlignment.Center
+SkinCreator_V1.Update4INFO.TextTransparency = 0
+SkinCreator_V1.Update4INFO.Visible = true
+SkinCreator_V1.Update4INFO.AnchorPoint = Vector2.new(0, 0)
+SkinCreator_V1.Update4INFO.ClipsDescendants = false
+
 SkinCreator_V1.Bar.Name = "Bar"
 SkinCreator_V1.Bar.ZIndex = 1
 SkinCreator_V1.Bar.Position = UDim2.new(0, -65, 0, 47)
@@ -992,6 +1030,30 @@ SkinCreator_V1.DevTools.ClipsDescendants = false
 SkinCreator_V1.UICorner_12.Name = "UICorner"
 SkinCreator_V1.UICorner_12.CornerRadius = UDim.new(0, 8)
 
+SkinCreator_V1.Autofarm.Name = "Autofarm"
+SkinCreator_V1.Autofarm.ZIndex = 1
+SkinCreator_V1.Autofarm.Position = UDim2.new(0, 0, 0.56400001, 0)
+SkinCreator_V1.Autofarm.Size = UDim2.new(0, 55, 0, 50)
+SkinCreator_V1.Autofarm.BackgroundColor3 = Color3.fromRGB(95,95,95)
+SkinCreator_V1.Autofarm.BackgroundTransparency = 0.75
+SkinCreator_V1.Autofarm.Text = "Autofarm"
+SkinCreator_V1.Autofarm.TextScaled = true
+SkinCreator_V1.Autofarm.TextSize = 14
+SkinCreator_V1.Autofarm.Font = Enum.Font.FredokaOne
+SkinCreator_V1.Autofarm.TextColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.Autofarm.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.Autofarm.TextStrokeTransparency = 1
+SkinCreator_V1.Autofarm.TextWrapped = true
+SkinCreator_V1.Autofarm.TextXAlignment = Enum.TextXAlignment.Center
+SkinCreator_V1.Autofarm.TextYAlignment = Enum.TextYAlignment.Center
+SkinCreator_V1.Autofarm.TextTransparency = 0
+SkinCreator_V1.Autofarm.Visible = true
+SkinCreator_V1.Autofarm.AnchorPoint = Vector2.new(0, 0)
+SkinCreator_V1.Autofarm.ClipsDescendants = false
+
+SkinCreator_V1.UICorner_13.Name = "UICorner"
+SkinCreator_V1.UICorner_13.CornerRadius = UDim.new(0, 8)
+
 SkinCreator_V1.Dev.Name = "Dev"
 SkinCreator_V1.Dev.ZIndex = 1
 SkinCreator_V1.Dev.Position = UDim2.new(0, 0, 0, 0)
@@ -1024,8 +1086,66 @@ SkinCreator_V1.Inf_Yield.Visible = true
 SkinCreator_V1.Inf_Yield.AnchorPoint = Vector2.new(0, 0)
 SkinCreator_V1.Inf_Yield.ClipsDescendants = false
 
-SkinCreator_V1.UICorner_13.Name = "UICorner"
-SkinCreator_V1.UICorner_13.CornerRadius = UDim.new(0, 8)
+SkinCreator_V1.UICorner_14.Name = "UICorner"
+SkinCreator_V1.UICorner_14.CornerRadius = UDim.new(0, 8)
+
+SkinCreator_V1.Autofarms.Name = "Autofarms"
+SkinCreator_V1.Autofarms.ZIndex = 1
+SkinCreator_V1.Autofarms.Position = UDim2.new(0, 0, 0, 0)
+SkinCreator_V1.Autofarms.Size = UDim2.new(0, 414, 0, 270)
+SkinCreator_V1.Autofarms.BackgroundColor3 = Color3.fromRGB(255,255,255)
+SkinCreator_V1.Autofarms.BackgroundTransparency = 1
+SkinCreator_V1.Autofarms.Visible = false
+SkinCreator_V1.Autofarms.AnchorPoint = Vector2.new(0, 0)
+SkinCreator_V1.Autofarms.ClipsDescendants = false
+SkinCreator_V1.Autofarms.BorderSizePixel = 0
+
+SkinCreator_V1.AutoLVL1.Name = "AutoLVL1"
+SkinCreator_V1.AutoLVL1.ZIndex = 1
+SkinCreator_V1.AutoLVL1.Position = UDim2.new(0, 0, 0, 50)
+SkinCreator_V1.AutoLVL1.Size = UDim2.new(0, 58, 0, 50)
+SkinCreator_V1.AutoLVL1.BackgroundColor3 = Color3.fromRGB(98,98,98)
+SkinCreator_V1.AutoLVL1.BackgroundTransparency = 0.75
+SkinCreator_V1.AutoLVL1.Text = "Auto Level 1 (Undetectable)"
+SkinCreator_V1.AutoLVL1.TextScaled = true
+SkinCreator_V1.AutoLVL1.TextSize = 14
+SkinCreator_V1.AutoLVL1.Font = Enum.Font.SourceSans
+SkinCreator_V1.AutoLVL1.TextColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.AutoLVL1.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.AutoLVL1.TextStrokeTransparency = 1
+SkinCreator_V1.AutoLVL1.TextWrapped = true
+SkinCreator_V1.AutoLVL1.TextXAlignment = Enum.TextXAlignment.Center
+SkinCreator_V1.AutoLVL1.TextYAlignment = Enum.TextYAlignment.Center
+SkinCreator_V1.AutoLVL1.TextTransparency = 0
+SkinCreator_V1.AutoLVL1.Visible = true
+SkinCreator_V1.AutoLVL1.AnchorPoint = Vector2.new(0, 0)
+SkinCreator_V1.AutoLVL1.ClipsDescendants = false
+
+SkinCreator_V1.UICorner_15.Name = "UICorner"
+SkinCreator_V1.UICorner_15.CornerRadius = UDim.new(0, 8)
+
+SkinCreator_V1.Loop_1.Name = "Loop#1"
+SkinCreator_V1.Loop_1.ZIndex = 1
+SkinCreator_V1.Loop_1.Position = UDim2.new(0.14009662, 0, 0.185185179, 0)
+SkinCreator_V1.Loop_1.Size = UDim2.new(0, 56, 0, 50)
+SkinCreator_V1.Loop_1.BackgroundColor3 = Color3.fromRGB(98,98,98)
+SkinCreator_V1.Loop_1.BackgroundTransparency = 0.75
+SkinCreator_V1.Loop_1.Text = ""
+SkinCreator_V1.Loop_1.TextScaled = true
+SkinCreator_V1.Loop_1.TextSize = 14
+SkinCreator_V1.Loop_1.Font = Enum.Font.SourceSans
+SkinCreator_V1.Loop_1.TextColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.Loop_1.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+SkinCreator_V1.Loop_1.TextStrokeTransparency = 1
+SkinCreator_V1.Loop_1.TextWrapped = true
+SkinCreator_V1.Loop_1.TextXAlignment = Enum.TextXAlignment.Center
+SkinCreator_V1.Loop_1.TextYAlignment = Enum.TextYAlignment.Center
+SkinCreator_V1.Loop_1.TextTransparency = 0
+SkinCreator_V1.Loop_1.ClearTextOnFocus = true
+SkinCreator_V1.Loop_1.MultiLine = false
+SkinCreator_V1.Loop_1.Visible = true
+SkinCreator_V1.Loop_1.AnchorPoint = Vector2.new(0, 0)
+SkinCreator_V1.Loop_1.ClipsDescendants = false
 
 SkinCreator_V1.OpenGui.Name = "OpenGui"
 SkinCreator_V1.OpenGui.ZIndex = 1
@@ -1052,8 +1172,8 @@ SkinCreator_V1.Electro.Visible = true
 SkinCreator_V1.Electro.AnchorPoint = Vector2.new(0, 0)
 SkinCreator_V1.Electro.ClipsDescendants = false
 
-SkinCreator_V1.UICorner_14.Name = "UICorner"
-SkinCreator_V1.UICorner_14.CornerRadius = UDim.new(0, 16)
+SkinCreator_V1.UICorner_16.Name = "UICorner"
+SkinCreator_V1.UICorner_16.CornerRadius = UDim.new(0, 16)
 
 
 SkinCreator_V1.Credits.MouseButton1Up:Connect(function()
@@ -1062,6 +1182,7 @@ SkinCreator_V1.Credits.MouseButton1Up:Connect(function()
 	SkinCreator_V1.SkinCreate.Visible = false
 	SkinCreator_V1.UpdateLog.Visible = false
 	SkinCreator_V1.Dev.Visible = false
+	SkinCreator_V1.Autofarms.Visible = false
 end)
 
 SkinCreator_V1.Dupes_Bugs.MouseButton1Up:Connect(function()
@@ -1070,6 +1191,7 @@ SkinCreator_V1.Dupes_Bugs.MouseButton1Up:Connect(function()
 	SkinCreator_V1.SkinCreate.Visible = false
 	SkinCreator_V1.UpdateLog.Visible = false
 	SkinCreator_V1.Dev.Visible = false
+	SkinCreator_V1.Autofarms.Visible = false
 end)
 
 SkinCreator_V1.SkinCreator.MouseButton1Up:Connect(function()
@@ -1078,6 +1200,7 @@ SkinCreator_V1.SkinCreator.MouseButton1Up:Connect(function()
 	SkinCreator_V1.Credit.Visible = false
 	SkinCreator_V1.UpdateLog.Visible = false
 	SkinCreator_V1.Dev.Visible = false
+	SkinCreator_V1.Autofarms.Visible = false
 end)
 
 SkinCreator_V1.DevTools.MouseButton1Up:Connect(function()
@@ -1094,6 +1217,44 @@ SkinCreator_V1.Updates.MouseButton1Up:Connect(function()
 	SkinCreator_V1.Credit.Visible = false
 	SkinCreator_V1.SkinCreate.Visible = false
 	SkinCreator_V1.Dev.Visible = false
+end)
+
+SkinCreator_V1.Autofarm.MouseButton1Up:Connect(function()
+	SkinCreator_V1.Autofarms.Visible = true
+	SkinCreator_V1.UpdateLog.Visible = false
+	SkinCreator_V1.Dupes.Visible = false
+	SkinCreator_V1.Credit.Visible = false
+	SkinCreator_V1.SkinCreate.Visible = false
+	SkinCreator_V1.Dev.Visible = false
+end)
+
+SkinCreator_V1.AutoLVL1.MouseButton1Up:Connect(function()
+	local Loops == SkinCreator_V1.Loop_1.Text
+	local Event = game:GetService("ReplicatedStorage").GiveXP
+	local Event2 = game:GetService("ReplicatedStorage").GiveXP
+	local Event3 = game:GetService("ReplicatedStorage").GiveXP
+	local Event4 = game:GetService("ReplicatedStorage").GiveXP
+
+	for i = 1, Loops do
+Event:FireServer(
+    49
+)
+
+task.wait(5)
+Event2:FireServer(
+    138
+)
+
+task.wait(5)
+Event3:FireServer(
+    264
+)
+
+task.wait(5)
+Event4:FireServer(
+    330
+)
+	end
 end)
 
 SkinCreator_V1.Yin___Yang.MouseButton1Up:Connect(function()

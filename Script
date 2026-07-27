@@ -162,7 +162,7 @@ local SkinCreator_V1 = {
 
 local UIDRAG = Instance.new("UIDragDetector")
 UIDRAG.Name = "Uidrag"
-UIDRAG.Parent = SkinCreator_V1.SkinCreator_V1
+UIDRAG.Parent = SkinCreator_V1.Stuff
 
 SkinCreator_V1.Electro.Draggable = true
 

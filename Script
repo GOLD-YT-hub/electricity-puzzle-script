@@ -1256,10 +1256,6 @@ SkinCreator_V1.AutoLVL1.MouseButton1Up:Connect(function()
 	end
 end)
 
-SkinCreator_V1.Yin___Yang.MouseButton1Up:Connect(function()
-	EquippedSkin.Value = "Darkness"
-end)
-
 SkinCreator_V1.Rainbow2.MouseButton1Up:Connect(function()
 	EquippedSkin.Value = "Rainbow2"
 end)

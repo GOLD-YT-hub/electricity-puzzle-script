@@ -164,8 +164,6 @@ local UIDRAG = Instance.new("UIDragDetector")
 UIDRAG.Name = "Uidrag"
 UIDRAG.Parent = SkinCreator_V1.Stuff
 
-SkinCreator_V1.Electro.Draggable = true
-
 SkinCreator_V1.SkinCreator_V1.Parent = game:GetService("CoreGui")
 SkinCreator_V1.Stuff.Parent = SkinCreator_V1.SkinCreator_V1
 SkinCreator_V1.SkinCreate.Parent = SkinCreator_V1.Stuff

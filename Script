@@ -1229,7 +1229,7 @@ SkinCreator_V1.Autofarm.MouseButton1Up:Connect(function()
 end)
 
 SkinCreator_V1.AutoLVL1.MouseButton1Up:Connect(function()
-	local Loops = SkinCreator_V1.Loop_1.Text
+	local Loops = tonumber(SkinCreator_V1.Loop_1.Text)
 	local Event = game:GetService("ReplicatedStorage").GiveXP
 	local Event2 = game:GetService("ReplicatedStorage").GiveXP
 	local Event3 = game:GetService("ReplicatedStorage").GiveXP

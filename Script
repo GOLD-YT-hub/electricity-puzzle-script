@@ -2,7 +2,7 @@
 local SkinsFolder = game:GetService("ReplicatedStorage").Skins
 
 local EquippedSkin = game:GetService("Players").LocalPlayer["EquippedSkin"]
-
+	
 --Script Stuff
 --Rainbow2 Color Setup
 
@@ -1336,7 +1336,6 @@ end)
 SkinCreator_V1.TextButton.MouseButton1Up:Connect(function()
 	SkinCreator_V1.SkinCreator_V1:Destroy()
 	RANBOW2:Destroy()
-	Darkness:Destroy()
 end)
 
 SkinCreator_V1.Minimize.MouseButton1Up:Connect(function()
@@ -1352,7 +1351,6 @@ end)
 SkinCreator_V1.Refresh.MouseButton1Up:Connect(function()
 	SkinCreator_V1.SkinCreator_V1:Destroy()
 	RANBOW2:Destroy()
-	Darkness:Destroy()
 	
 	task.wait(3)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/GOLD-YT-hub/electricity-puzzle-script/refs/heads/main/Script"))()

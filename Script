@@ -2,7 +2,7 @@
 local SkinsFolder = game:GetService("ReplicatedStorage").Skins
 
 local EquippedSkin = game:GetService("Players").LocalPlayer["EquippedSkin"]
-	
+
 --Script Stuff
 --Rainbow2 Color Setup
 
@@ -1209,6 +1209,7 @@ SkinCreator_V1.DevTools.MouseButton1Up:Connect(function()
 	SkinCreator_V1.Credit.Visible = false
 	SkinCreator_V1.UpdateLog.Visible = false
 	SkinCreator_V1.SkinCreate.Visible = false
+	SkinCreator_V1.Autofarms.Visible = false
 end)
 
 SkinCreator_V1.Updates.MouseButton1Up:Connect(function()
@@ -1217,6 +1218,7 @@ SkinCreator_V1.Updates.MouseButton1Up:Connect(function()
 	SkinCreator_V1.Credit.Visible = false
 	SkinCreator_V1.SkinCreate.Visible = false
 	SkinCreator_V1.Dev.Visible = false
+	SkinCreator_V1.Autofarms.Visible = false
 end)
 
 SkinCreator_V1.Autofarm.MouseButton1Up:Connect(function()
@@ -1229,31 +1231,28 @@ SkinCreator_V1.Autofarm.MouseButton1Up:Connect(function()
 end)
 
 SkinCreator_V1.AutoLVL1.MouseButton1Up:Connect(function()
-	local Loops = SkinCreator_V1.Loop_1.Text
+	local Loops = tonumber(SkinCreator_V1.Loop_1.Text)
 	local Event = game:GetService("ReplicatedStorage").GiveXP
-	local Event2 = game:GetService("ReplicatedStorage").GiveXP
-	local Event3 = game:GetService("ReplicatedStorage").GiveXP
-	local Event4 = game:GetService("ReplicatedStorage").GiveXP
-
+	
 	for i = 1, Loops do
-Event:FireServer(
-    49
-)
+		Event:FireServer(
+			49
+		)
 
-task.wait(5)
-Event2:FireServer(
-    138
-)
+		task.wait(5)
+		Event:FireServer(
+			138
+		)
 
-task.wait(5)
-Event3:FireServer(
-    264
-)
+		task.wait(5)
+		Event:FireServer(
+			264
+		)
 
-task.wait(5)
-Event4:FireServer(
-    330
-)
+		task.wait(5)
+		Event:FireServer(
+			330
+		)
 	end
 end)
 
@@ -1270,7 +1269,7 @@ SkinCreator_V1.Dupe_XP.MouseButton1Up:Connect(function()
 
 	local Event = game:GetService("ReplicatedStorage").GiveXP
 	Event:FireServer(
-    	XP
+		XP
 	)
 end)
 
@@ -1279,7 +1278,7 @@ SkinCreator_V1.Reset_XP.MouseButton1Up:Connect(function()
 
 	local Event = game:GetService("ReplicatedStorage").GiveXP
 	Event:FireServer(
-    	-XP
+		-XP
 	)
 end)
 
@@ -1288,8 +1287,8 @@ SkinCreator_V1.Dupe_Volts.MouseButton1Up:Connect(function()
 
 	local Event2 = game:GetService("ReplicatedStorage").GiveVolts
 	Event2:FireServer(
-    	Volts,
-    	"click"
+		Volts,
+		"click"
 	)
 end)
 
@@ -1298,34 +1297,34 @@ SkinCreator_V1.Reset_Volts.MouseButton1Up:Connect(function()
 
 	local Event2 = game:GetService("ReplicatedStorage").GiveVolts
 	Event2:FireServer(
-    	-Volts,
-    	"click"
+		-Volts,
+		"click"
 	)
 end)
 
 SkinCreator_V1.Free_Upgrade.MouseButton1Up:Connect(function()
 	local Event = game:GetService("ReplicatedStorage").BuyUpgrade
 	Event:FireServer(
-    	"Current",
-    	0
+		"Current",
+		0
 	)
 
 	local Event2 = game:GetService("ReplicatedStorage").BuyUpgrade
 	Event2:FireServer(
-    	"SolarPanel",
-    	0
+		"SolarPanel",
+		0
 	)
 
 	local Event3 = game:GetService("ReplicatedStorage").BuyUpgrade
 	Event3:FireServer(
-    	"Windmill",
-    	0
+		"Windmill",
+		0
 	)
 
 	local Event4 = game:GetService("ReplicatedStorage").BuyUpgrade
 	Event4:FireServer(
-    	"Biomass",
-    	0
+		"Biomass",
+		0
 	)
 end)
 
@@ -1351,7 +1350,7 @@ end)
 SkinCreator_V1.Refresh.MouseButton1Up:Connect(function()
 	SkinCreator_V1.SkinCreator_V1:Destroy()
 	RANBOW2:Destroy()
-	
+
 	task.wait(3)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/GOLD-YT-hub/electricity-puzzle-script/refs/heads/main/Script"))()
 end)

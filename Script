@@ -15,7 +15,7 @@ RANBOW2:SetAttribute("UnlockType", "Level")
 local OrderNum = Instance.new("IntValue")
 OrderNum.Parent = RANBOW2
 OrderNum.Name = "OrderNumber"
-OrderNum.Value = "12"
+OrderNum.Value = 12
 
 local ElectricityColors2 = Instance.new("Folder")
 ElectricityColors2.Parent = RANBOW2

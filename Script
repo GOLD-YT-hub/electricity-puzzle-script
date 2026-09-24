@@ -1511,7 +1511,7 @@ end)
 
 SkinCreator_V1.Badge.MouseButton1Up:Connect(function()
 	SkinCreator_V1.Badges.Visible = true
-	SkinCreator_V1.Autofarms.Visible = true
+	SkinCreator_V1.Autofarms.Visible = false
 	SkinCreator_V1.UpdateLog.Visible = false
 	SkinCreator_V1.Dupes.Visible = false
 	SkinCreator_V1.Credit.Visible = false
@@ -1541,12 +1541,12 @@ SkinCreator_V1.IceConfig.MouseButton1Up:Connect(function()
 	else
 		SkinCreator_V1.IceConfig.Text = "Ice: Enabled"
 		
-		temp1.Value = 1
-		temp2.Value = 1
-		temp3.Value = 1
-		temp4.Value = 1
-		temp5.Value = 1
-		temp6.Value = 1
+		temp1.Value = 10000000
+		temp2.Value = 10000000
+		temp3.Value = 10000000
+		temp4.Value = 10000000
+		temp5.Value = 10000000
+		temp6.Value = 10000000
 	end
 end)
 
@@ -1691,3 +1691,4 @@ UIDRAG.Name = "Uidrag"
 UIDRAG.Parent = SkinCreator_V1.Stuff
 
 print("Loaded Electro Private V4")
+print("Basically admin panel but kinda worser ig? still works great tho :D")

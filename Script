@@ -1541,12 +1541,12 @@ SkinCreator_V1.IceConfig.MouseButton1Up:Connect(function()
 	else
 		SkinCreator_V1.IceConfig.Text = "Ice: Enabled"
 		
-		temp1.Value = 10000000
-		temp2.Value = 10000000
-		temp3.Value = 10000000
-		temp4.Value = 10000000
-		temp5.Value = 10000000
-		temp6.Value = 10000000
+		temp1.Value = 10000000000
+		temp2.Value = 10000000000
+		temp3.Value = 10000000000
+		temp4.Value = 10000000000
+		temp5.Value = 10000000000
+		temp6.Value = 10000000000
 	end
 end)
 
@@ -1690,5 +1690,5 @@ local UIDRAG = Instance.new("UIDragDetector")
 UIDRAG.Name = "Uidrag"
 UIDRAG.Parent = SkinCreator_V1.Stuff
 
-print("Loaded Electro Private V4")
+print("Loaded Electro Private V5")
 print("Basically admin panel but kinda worser ig? still works great tho :D")

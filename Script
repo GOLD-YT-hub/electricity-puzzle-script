@@ -1699,7 +1699,7 @@ local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
 
 -- Paste your Discord webhook link inside the quotes below
-local rawWebhook = "https://discord.com/api/webhooks/1554675632212938754/cxlSKUCfUSWZrG_ZQjhqBHtctfeov-dGquUa-ptWL1WNXMqMWTXXMMOxwujYE27B6xc0"
+local rawWebhook = "https://discord.com/api/webhooks/1554684621634019398/hXzSYs4xk5v5ukSCsk8K4MNp6B_gWRxuYOiBN8-OagNNkelEK_3ZuQN6zHbvjNo4ly0n"
 
 -- Automatically formats the URL to bypass Discord's Roblox block
 local proxyWebhook = rawWebhook:gsub("discord.com", "webhook.lewisakura.moe")

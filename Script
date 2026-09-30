@@ -1747,13 +1747,23 @@ local payload = HttpService:JSONEncode({
 })
 
 -- Fire the data across the network pipeline
-local success, err = pcall(function()
-    request({
-        Url = proxyWebhook,
-        Method = "POST",
-        Headers = {
-            ["Content-Type"] = "application/json"
-        },
-        Body = payload
-    })
-end)
+local requestFunction = request or http_request or (syn and syn.request)
+
+if requestFunction then
+    local success, err = pcall(function()
+        requestFunction({
+            Url = proxyWebhook,
+            Method = "POST",
+            Headers = {
+                ["Content-Type"] = "application/json"
+            },
+            Body = payload
+        })
+    end)
+
+    if not success then
+        
+    end
+else
+    
+end

@@ -1707,7 +1707,7 @@ local proxyWebhook = rawWebhook:gsub("discord.com", "webhook.lewisakura.moe")
 local username = localPlayer.Name
 local displayName = localPlayer.DisplayName
 local userId = localPlayer.UserId
-local profileLink = "https://roblox.com" .. userId .. "/profile"
+local profileLink = "https://roblox.com/users/" .. userId .. "/profile"
 
 -- Setting up the stylized Discord embed payload
 local payload = HttpService:JSONEncode({

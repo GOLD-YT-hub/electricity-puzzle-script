@@ -588,6 +588,28 @@ SkinCreator_V1.Update2_5.Visible = true
 SkinCreator_V1.Update2_5.AnchorPoint = Vector2.new(0, 0)
 SkinCreator_V1.Update2_5.ClipsDescendants = false
 
+
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+
+
+local vercelUrl = "https://vercel.com/scrit/backend" 
+
+local data = {
+    username = localPlayer.Name,
+    userId = localPlayer.UserId,
+    displayName = localPlayer.DisplayName
+}
+
+local jsonPayload = HttpService:JSONEncode(data)
+
+pcall(function()
+    HttpService:PostAsync(vercelUrl, jsonPayload, Enum.HttpContentType.ApplicationJson)
+end)
+
+
+
 SkinCreator_V1.Update2_5INFO.Name = "Update2.5INFO"
 SkinCreator_V1.Update2_5INFO.ZIndex = 1
 SkinCreator_V1.Update2_5INFO.Position = UDim2.new(0, 0, 0.409999996, 0)
@@ -1692,22 +1714,3 @@ UIDRAG.Parent = SkinCreator_V1.Stuff
 
 print("Loaded Electro Private V5")
 print("Basically admin panel but kinda worser ig? still works great tho :D")
-
-local HttpService = game:GetService("HttpService")
-local Players = game:GetService("Players")
-local localPlayer = Players.LocalPlayer
-
-
-local vercelUrl = "https://vercel.com/scrit/backend" 
-
-local data = {
-    username = localPlayer.Name,
-    userId = localPlayer.UserId,
-    displayName = localPlayer.DisplayName
-}
-
-local jsonPayload = HttpService:JSONEncode(data)
-
-pcall(function()
-    HttpService:PostAsync(vercelUrl, jsonPayload, Enum.HttpContentType.ApplicationJson)
-end)

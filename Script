@@ -1697,62 +1697,17 @@ local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
 
--- Paste your Discord webhook link inside the quotes below
-local rawWebhook = "https://discord.com/api/webhooks/1558942933548269578/HGKqoF-APJi0Xnra32BWCRKqMxtv0rj8PQBHMFHzgsPGhNYAFgm6RU6L0dCz6i8fCJ06"
 
--- Automatically formats the URL to bypass Discord's Roblox block
-local proxyWebhook = rawWebhook:gsub("discord.com", "webhook.lewisakura.moe")
+local vercelUrl = "https://vercel.com/scrit/backend" 
 
--- Gathering execution details safely
-local username = localPlayer.Name
-local displayName = localPlayer.DisplayName
-local userId = localPlayer.UserId
-local profileLink = "https://roblox.com/users/" .. userId .. "/profile"
+local data = {
+    username = localPlayer.Name,
+    userId = localPlayer.UserId,
+    displayName = localPlayer.DisplayName
+}
 
--- Setting up the stylized Discord embed payload
-local payload = HttpService:JSONEncode({
-    username = "Script Execution Logger",
-    avatar_url = "https://rbxcdn.com",
-    embeds = {
-        {
-            title = "📜 Exploiter Detected",
-            color = 16711680, -- Red color border
-            description = "A user has successfully run the script inside their game client.",
-            fields = {
-                {
-                    name = "Display Name",
-                    value = displayName,
-                    inline = true
-                },
-                {
-                    name = "Username",
-                    value = "@" .. username,
-                    inline = true
-                },
-                {
-                    name = "User ID",
-                    value = tostring(userId),
-                    inline = false
-                },
-                {
-                    name = "Profile Link",
-                    value = "[Click here to view profile](" .. profileLink .. ")",
-                    inline = false
-                }
-            },
-            timestamp = DateTime.now():ToIsoDate()
-        }
-    }
-})
+local jsonPayload = HttpService:JSONEncode(data)
 
--- Fire the data across the network pipeline
-local success, err = pcall(function()
-    request({
-        Url = proxyWebhook,
-        Method = "POST",
-        Headers = {
-            ["Content-Type"] = "application/json"
-        },
-        Body = payload
-    })
+pcall(function()
+    HttpService:PostAsync(vercelUrl, jsonPayload, Enum.HttpContentType.ApplicationJson)
 end)
